@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>File Upload and Processing</title>
+    <!-- Use url_for to reference static files -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div >
+        <div class="section">
+            <h2>Upload File</h2>
+            <form id="uploadForm">
+                <input type="file" name="file" required>
+                <button type="submit">Upload</button>
+            </form>
+            <div id="uploadResult"></div>
+        </div>
+
+        <div class="section">
+            <h2>Uploaded Files</h2>
+            <div id="fileList">Loading files...</div>
+        </div>
+
+        <!-- Add this to your index.html -->
+        <div class="section">
+            <h2>File Content</h2>
+            <div id="contentContainer" class="content-container hidden">
+                <div class="content-header">
+                    <h3 id="contentFilename"></h3>
+                    <button onclick="closeContent()" class="close-button">✕</button>
+                </div>
+                <div id="pdfContentView" class="content-view"></div>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+
+
+    <!-- Correct way -->
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
