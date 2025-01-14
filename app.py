@@ -58,5 +58,6 @@ def get_file_content(filename):
         content = read_file_content(filepath, file_ext)
         return jsonify({'content': content, 'filename': filename})
     return 'File not found', 404
+
 if __name__ == '__main__':
     app.run(debug=True)
